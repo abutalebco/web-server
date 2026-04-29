@@ -1,14 +1,14 @@
 //
-// Web Server
+// Simple Socket
 // 27/04/2026
 //
-// Web Server source file
-// web_server.cpp
+// SimpleSocket.cpp source file
+// SimpleSocket.cpp
 //
 // Mohamed Abutaleb
 //
 
-#include "web_server.hpp"
+#include "SimpleSocket.hpp"
 
 // Constructor
 
@@ -22,10 +22,6 @@ WS::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int port, 
     // establish socket
     sock = socket(domain, service, protocol);
     test_connection(sock);
-
-    // establish connection
-    connection = connect_to_network(sock, address);
-    test_connection(connection);
 }
 
 // Test connection
@@ -54,4 +50,10 @@ int WS::SimpleSocket::get_sock()
 int WS::SimpleSocket::get_connection()
 {
     return connection;
+}
+
+// setters
+void WS::SimpleSocket::set_connection(int con)
+{
+    connection = con;
 }

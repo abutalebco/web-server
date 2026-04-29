@@ -1,15 +1,15 @@
 //
-// Web Server
+// Simple Socket
 // 27/04/2026
 //
-// Web Server C++ Library
-// web_server.hpp
+// SimpleSocket.hpp C++ Library
+// SimpleSocket.hpp
 //
 // Mohamed Abutaleb
 //
 
-#ifndef web_server_hpp
-#define web_server_hpp
+#ifndef SimpleSocket_hpp
+#define SimpleSocket_hpp
 
 #include <stdio.h>
 #include <sys/socket.h>
@@ -40,7 +40,10 @@ namespace WS
         struct sockaddr_in get_address();
         int get_sock();
         int get_connection();
+
+        // setters
+        void set_connection(int con);
     };
 }
 
-#endif /* web_server_hpp */
+#endif /* SimpleSocket_hpp */
