@@ -1,1 +1,13 @@
 .vscode
+.gitignore
+
+Resources/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+.env
+*.env
+
