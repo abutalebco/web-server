@@ -38,17 +38,25 @@ namespace WS
                 std::cout << "[TCP] Client connected: "
                           << inet_ntoa(client_addr.sin_addr)
                           << ":" << ntohs(client_addr.sin_port) << "\n";
-                char buffer[1024];
-                std::memset(buffer, 0, sizeof(buffer));
-                int bytes_read = recv(client_fd, buffer, sizeof(buffer) - 1, 0);
-                if (bytes_read > 0)
+                while (true)
                 {
-                    std::cout << "[TCP] Received (" << bytes_read << " bytes):\n";
-                    std::cout << buffer << "\n";
+                    char buffer[1024];
+                    std::memset(buffer, 0, sizeof(buffer));
+                    int bytes_read = recv(client_fd, buffer, sizeof(buffer) - 1, 0);
+                    if (bytes_read == 0)
+                    {
+                        std::cout << "[TCP] Client Disconnected\n";
+                        break;
+                    }
+                    if (bytes_read > 0)
+                    {
+                        std::cout << "[TCP] Received (" << bytes_read << " bytes):\n";
+                        std::cout << buffer << "\n";
+                    }
+                    // Raw TCP reply (can be plain text)
+                    const char *reply = "TCP server received your message.\n";
+                    send(client_fd, reply, std::strlen(reply), 0);
                 }
-                // Raw TCP reply (can be plain text)
-                const char *reply = "TCP server received your message.\n";
-                send(client_fd, reply, std::strlen(reply), 0);
                 close(client_fd);
             }
         }
