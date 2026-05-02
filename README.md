@@ -26,7 +26,7 @@ make
 
 ```bash
 # Run
-./bin/web-server
+./bin/webserver
 
 ```
 
