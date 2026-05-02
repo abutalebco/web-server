@@ -2,7 +2,7 @@
 // Binding Socket
 // 29/04/2026
 //
-// BindingSocket.hpp is a utility function that binds a socket to a specified port and address.
+// Web Server C++ Library
 // BindingSocket.hpp
 //
 // Mohamed Abutaleb
@@ -20,7 +20,9 @@ namespace WS
     class BindingSocket : public SimpleSocket
     {
     public:
-        BindingSocket(int domain, int service, int protocol, int port, u_long interface) : SimpleSocket(domain, service, protocol, port, interface) {};
+        // constructor
+        BindingSocket(int domain, int service, int protocol, int port, u_long interface);
+        // virtual function from parent
         int connect_to_network(int sock, struct sockaddr_in address);
     };
 }

@@ -2,7 +2,7 @@
 // Binding Socket
 // 29/04/2026
 //
-// BindingSocket.cpp source file
+// Web Server C++ Library
 // BindingSocket.cpp
 //
 // Mohamed Abutaleb

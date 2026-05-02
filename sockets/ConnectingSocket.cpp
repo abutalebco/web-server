@@ -2,7 +2,7 @@
 // Connecting Socket
 // 30/04/2026
 //
-// ConnectingSocket.cpp source file
+// Web Server C++ Library
 // ConnectingSocket.cpp
 //
 // Mohamed Abutaleb

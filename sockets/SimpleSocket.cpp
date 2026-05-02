@@ -2,7 +2,7 @@
 // Simple Socket
 // 27/04/2026
 //
-// SimpleSocket.cpp source file
+// Web Server C++ Library
 // SimpleSocket.cpp
 //
 // Mohamed Abutaleb

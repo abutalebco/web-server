@@ -2,7 +2,7 @@
 // Connecting Socket
 // 30/04/2026
 //
-// ConnectingSocket.hpp is a utility creating and managing a socket connection to a specified host and port.
+// Web Server C++ Library
 // ConnectingSocket.hpp
 //
 // Mohamed Abutaleb
